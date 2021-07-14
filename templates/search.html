@@ -8,7 +8,7 @@
 <body>
     <h3>You were trying to find '{{ search_name }}'</h3>
     <form action="/search" method="POST">
-        <input type="text" id="name" name="name" autocomplete="False">
+        <input type="text" id="name" name="name" autocomplete="off">
         <button type="submit">Search</button>
     </form>
     {% if results %}

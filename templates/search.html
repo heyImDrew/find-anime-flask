@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Look for anime</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
+</head>
+<body>
+    <h3>You were trying to find '{{ search_name }}'</h3>
+    <form action="/search" method="POST">
+        <input type="text" id="name" name="name" autocomplete="False">
+        <button type="submit">Search</button>
+    </form>
+    {% if results %}
+        <p>Results:</p>
+        <p>
+            {% for result in results %}
+                * {{ result.title }} <br>
+            {% endfor %}
+        </p>
+    {% else %}
+        <p>No result were found or platform temporary unavailable</p>
+    {% endif %}
+</body>
+</html>

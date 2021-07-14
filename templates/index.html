@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Look for anime</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}" />
+</head>
+<body>
+<h1>Welcome!</h1>
+    <p>Start searching using searchbox below.</p>
+    <br>
+<form action="/search" method="POST">
+    <input type="text" id="name" name="name" autocomplete="False">
+    <button type="submit">Search</button>
+</form>
+</body>
+</html>

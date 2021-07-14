@@ -19,4 +19,4 @@ def search():
     return flask.render_template('search.html', search_name=search_name, results=results)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True, host='0.0.0.0', port=7007)
